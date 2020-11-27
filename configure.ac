@@ -7,7 +7,7 @@ AC_PROG_CC
 AC_CANONICAL_SYSTEM
 
 dnl Initialize automake
-AM_INIT_AUTOMAKE([foreign])
+AM_INIT_AUTOMAKE([foreign subdir-objects -Wall -Werror -Wno-portability])
 AM_SILENT_RULES([yes])
 
 AC_CONFIG_FILES(Makefile)
