@@ -46,7 +46,7 @@ int main(int argc, char * argv[])
 				perror(argv[1]);
 				exit(4);
 			}
-			printf("%.*s\n", read_bytes, readbuf);
+			printf("%.*s", read_bytes, readbuf);
 		}
 	}
 	return 0;
