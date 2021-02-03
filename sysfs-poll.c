@@ -37,7 +37,7 @@ int main(int argc, char * argv[])
 	pfd.events = POLLERR | POLLPRI;
 	pfd.revents = 0;
 	while ((retval = poll(&pfd, 1, 100)) >= 0) {
-		if (pfd.revents & POLLERR) {
+		if (pfd.revents & (POLLERR | POLLPRI)) {
 			pfd.revents = 0;
 
 			lseek(attr_fd, 0, SEEK_SET);
