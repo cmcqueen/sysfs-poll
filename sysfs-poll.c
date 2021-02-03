@@ -31,7 +31,7 @@ int main(int argc, char * argv[])
 		perror(argv[1]);
 		exit(3);
 	}
-	printf("%.*s", read_bytes, readbuf);
+	printf("%.*s", (int)read_bytes, readbuf);
 
 	pfd.fd = attr_fd;
 	pfd.events = POLLERR | POLLPRI;
@@ -46,7 +46,7 @@ int main(int argc, char * argv[])
 				perror(argv[1]);
 				exit(4);
 			}
-			printf("%.*s", read_bytes, readbuf);
+			printf("%.*s", (int)read_bytes, readbuf);
 		}
 	}
 	return 0;
