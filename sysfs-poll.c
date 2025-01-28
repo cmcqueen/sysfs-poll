@@ -34,7 +34,7 @@ int main(int argc, char * argv[])
 	printf("%.*s", (int)read_bytes, readbuf);
 
 	pfd.fd = attr_fd;
-	pfd.events = POLLERR | POLLPRI;
+	pfd.events = POLLPRI;
 	pfd.revents = 0;
 	while ((retval = poll(&pfd, 1, 100)) >= 0) {
 		if (pfd.revents & (POLLERR | POLLPRI)) {
